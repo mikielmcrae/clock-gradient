@@ -35,13 +35,16 @@ function changeSky(){
     function setRGB(red, green, blue) {
        
         
-        let r = parseInt(seconds + 30) * red;
+        let r = parseInt(seconds) * red;
+            // if (seconds > 30) {
+            //     r = parseInt(seconds%20) * red;
+            // }
         let g = parseInt(minutes) * green;
         let b = parseInt(hours) * blue;
 
         let r2 = parseInt(hours) * red;
-        let g2 = parseInt(seconds + 20) * green;
-        let b2 = parseInt(minutes) * blue;
+        let g2 = parseInt(minutes) * green;
+        let b2 = parseInt(seconds) * blue;
         
         document.body.style.background = 'linear-gradient(to right, rgb(' + r + ',' + g + ',' + b + '), rgb(' + r2 + ',' + g2 + ',' + b2 + ')';
         
